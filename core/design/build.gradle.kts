@@ -5,10 +5,10 @@ plugins {
 
 android {
     namespace = "com.mokelab.android16demo.core.design"
-    compileSdk = libs.versions.compileSdk.get().toInt()
-
+    compileSdkPreview = "Baklava"
+    
     defaultConfig {
-        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdkPreview = "Baklava"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
