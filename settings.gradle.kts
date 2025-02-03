@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Android16demo"
 include(":app")
+include(":core:design")
