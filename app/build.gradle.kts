@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.mokelab.demo.android16"
         minSdkPreview = libs.versions.minSdk.get()
-        targetSdkPreview = libs.versions.targetSdkPreview.get()
+        targetSdkPreview = libs.versions.targetSdk.get()
         versionCode = 1
         versionName = "1.0"
 
