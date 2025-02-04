@@ -23,6 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BackActivity1" />
+        <activity android:name=".BackActivity2" />
     </application>
 
 </manifest>
