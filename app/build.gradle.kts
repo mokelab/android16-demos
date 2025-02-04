@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.mokelab.demo.android16"
-    compileSdkPreview = "Baklava"
+    compileSdkPreview = libs.versions.compileSdk.get()
 
     defaultConfig {
         applicationId = "com.mokelab.demo.android16"
-        minSdkPreview = "Baklava"
-        targetSdkPreview = "Baklava"
+        minSdkPreview = libs.versions.minSdk.get()
+        targetSdkPreview = libs.versions.targetSdk.get()
         versionCode = 1
         versionName = "1.0"
 
