@@ -8,7 +8,7 @@ android {
     compileSdkPreview = libs.versions.compileSdk.get()
 
     defaultConfig {
-        targetSdkPreview = libs.versions.targetSdk.get()
+        minSdkPreview = libs.versions.minSdk.get()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")

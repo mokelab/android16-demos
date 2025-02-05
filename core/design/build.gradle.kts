@@ -6,9 +6,9 @@ plugins {
 android {
     namespace = "com.mokelab.android16demo.core.design"
     compileSdkPreview = libs.versions.compileSdk.get()
-    
+
     defaultConfig {
-        targetSdkPreview = libs.versions.targetSdk.get()
+        minSdkPreview = libs.versions.minSdk.get()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -33,6 +33,9 @@ android {
 }
 
 dependencies {
+    api(platform(libs.androidx.compose.bom))
+    api(libs.androidx.ui)
+    implementation(libs.androidx.material3)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.runner)
