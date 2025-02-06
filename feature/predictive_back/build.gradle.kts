@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mokelab.android16demo.core.design"
+    namespace = "com.mokelab.android16demo.predictive_back"
     compileSdkPreview = libs.versions.compileSdk.get()
 
     defaultConfig {
@@ -33,10 +33,11 @@ android {
 }
 
 dependencies {
-    api(platform(libs.androidx.compose.bom))
-    api(libs.androidx.ui)
-    implementation(libs.androidx.material3)
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.runner)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
