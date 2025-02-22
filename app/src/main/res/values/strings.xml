@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android16demo</string>
+    <string name="qr_code_scanner">QR Code Scanner</string>
 </resources>
