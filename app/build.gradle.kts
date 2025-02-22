@@ -2,6 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlinx.serialization)
 }
 
 android {
@@ -9,7 +12,7 @@ android {
     compileSdkPreview = libs.versions.compileSdk.get()
 
     defaultConfig {
-        applicationId = "com.mokelab.demo.android16"
+        applicationId = "com.mokelab.demo.android16_1"
         minSdkPreview = libs.versions.minSdk.get()
         targetSdkPreview = libs.versions.targetSdk.get()
         versionCode = 1
@@ -40,6 +43,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:design"))
+    implementation(project(":feature:optout16kb"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -49,6 +54,13 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    implementation(libs.navigation.compose)
+    implementation(libs.kotlinx.serialization.core)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
