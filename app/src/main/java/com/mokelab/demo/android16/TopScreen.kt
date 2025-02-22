@@ -13,11 +13,16 @@ import com.mokelab.demo.android16.core.design.component.Screen
 @Composable
 fun TopScreen(
     toScanner: () -> Unit,
+    toSchedule: () -> Unit,
 ) {
     val menuItems = listOf(
         TopMenuItem(
             title = stringResource(R.string.qr_code_scanner),
             onClick = toScanner,
+        ),
+        TopMenuItem(
+            title = stringResource(R.string.schedule_at_fixed_rate),
+            onClick = toSchedule,
         ),
     )
     Screen { innerPadding ->

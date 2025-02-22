@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Android16demo</string>
     <string name="qr_code_scanner">QR Code Scanner</string>
+    <string name="schedule_at_fixed_rate">scheduleAtFixedRate</string>
 </resources>

@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/core/design" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/optout16kb" />
+            <option value="$PROJECT_DIR$/feature/schedule" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.mokelab.demo.android16.feature.optout16kb.ScannerScreen
 import com.mokelab.demo.android16.feature.optout16kb.ScannerViewModel
+import com.mokelab.demo.android16.feature.schedule.ScheduleScreen
 import kotlinx.serialization.Serializable
 
 @Composable
@@ -18,6 +19,9 @@ fun MainScreen() {
             TopScreen(
                 toScanner = {
                     navController.navigate(Scanner)
+                },
+                toSchedule = {
+                    navController.navigate(Schedule)
                 }
             )
         }
@@ -28,6 +32,9 @@ fun MainScreen() {
                 back = { navController.popBackStack() }
             )
         }
+        composable<Schedule> {
+            ScheduleScreen()
+        }
     }
 }
 
@@ -36,4 +43,7 @@ data object Top
 
 @Serializable
 data object Scanner
+
+@Serializable
+data object Schedule
 

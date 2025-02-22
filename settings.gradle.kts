@@ -23,3 +23,4 @@ rootProject.name = "Android16demo"
 include(":app")
 include(":core:design")
 include(":feature:optout16kb")
+include(":feature:schedule")
