@@ -8,13 +8,13 @@ plugins {
 }
 
 android {
-    namespace = "com.mokelab.demo.android16"
+    namespace = "com.mokelab.demo.android16.app35"
     compileSdkPreview = libs.versions.compileSdk.get()
 
     defaultConfig {
-        applicationId = "com.mokelab.demo.android16"
-        minSdkPreview = libs.versions.minSdk.get()
-        targetSdkPreview = libs.versions.targetSdk.get()
+        applicationId = "com.mokelab.demo.android16.app35"
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -44,9 +44,8 @@ android {
 
 dependencies {
     implementation(project(":core:design"))
-    implementation(project(":feature:optout16kb"))
-    implementation(project(":feature:schedule"))
     implementation(project(":feature:menu"))
+    implementation(project(":feature:schedule"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
