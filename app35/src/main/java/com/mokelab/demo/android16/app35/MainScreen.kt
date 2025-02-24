@@ -1,15 +1,12 @@
-package com.mokelab.demo.android16
+package com.mokelab.demo.android16.app35
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.mokelab.demo.android16.feature.menu.MenuItem
 import com.mokelab.demo.android16.feature.menu.MenuScreen
-import com.mokelab.demo.android16.feature.optout16kb.ScannerScreen
-import com.mokelab.demo.android16.feature.optout16kb.ScannerViewModel
 import com.mokelab.demo.android16.feature.schedule.ScheduleScreen
 import kotlinx.serialization.Serializable
 
@@ -21,20 +18,10 @@ fun MainScreen() {
         composable<Top> {
             MenuScreen(
                 menuItems = listOf(
-                    MenuItem(stringResource(R.string.qr_code_scanner)) {
-                        navController.navigate(Scanner)
-                    },
                     MenuItem(stringResource(R.string.schedule_at_fixed_rate)) {
                         navController.navigate(Schedule)
                     },
                 )
-            )
-        }
-        composable<Scanner> {
-            val viewModel: ScannerViewModel = hiltViewModel()
-            ScannerScreen(
-                viewModel = viewModel,
-                back = { navController.popBackStack() }
             )
         }
         composable<Schedule> {
@@ -45,9 +32,6 @@ fun MainScreen() {
 
 @Serializable
 data object Top
-
-@Serializable
-data object Scanner
 
 @Serializable
 data object Schedule

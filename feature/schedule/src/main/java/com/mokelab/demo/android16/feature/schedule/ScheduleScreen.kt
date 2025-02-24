@@ -33,6 +33,6 @@ fun ScheduleScreen() {
         executor.scheduleAtFixedRate({
             count++
             println("task $count")
-        }, 1000, 10000, java.util.concurrent.TimeUnit.MILLISECONDS)
+        }, 1000, 100, java.util.concurrent.TimeUnit.MILLISECONDS)
     }
 }
