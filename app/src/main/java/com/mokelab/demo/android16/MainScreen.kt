@@ -11,6 +11,7 @@ import com.mokelab.demo.android16.feature.menu.MenuScreen
 import com.mokelab.demo.android16.feature.optout16kb.ScannerScreen
 import com.mokelab.demo.android16.feature.optout16kb.ScannerViewModel
 import com.mokelab.demo.android16.feature.schedule.ScheduleScreen
+import com.mokelab.demo.android16.feature.verticaltext.VerticalTextScreen
 import com.mokelab.demo.android16.feature.vibrator.VibratorScreen
 import kotlinx.serialization.Serializable
 
@@ -31,6 +32,9 @@ fun MainScreen() {
                     MenuItem(stringResource(R.string.vibrator)) {
                         navController.navigate(Vibrator)
                     },
+                    MenuItem(stringResource(R.string.vertical_text)) {
+                        navController.navigate(VerticalText)
+                    },
                 )
             )
         }
@@ -49,6 +53,11 @@ fun MainScreen() {
                 back = { navController.popBackStack() }
             )
         }
+        composable<VerticalText> {
+            VerticalTextScreen(
+                back = { navController.popBackStack() }
+            )
+        }
     }
 }
 
@@ -63,4 +72,7 @@ data object Schedule
 
 @Serializable
 data object Vibrator
+
+@Serializable
+data object VerticalText
 

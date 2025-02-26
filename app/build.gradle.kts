@@ -48,6 +48,7 @@ dependencies {
     implementation(project(":feature:schedule"))
     implementation(project(":feature:menu"))
     implementation(project(":feature:vibrator"))
+    implementation(project(":feature:verticaltext"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
